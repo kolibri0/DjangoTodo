@@ -1,7 +1,8 @@
 from django.urls import path
+from todo.views import index
 
-from . import views
+app_name = 'index'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', index, name='index'),
 ]

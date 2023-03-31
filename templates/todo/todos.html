@@ -1,0 +1,28 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/todo.css' %}">
+{% endblock %}
+
+{% block title %}
+Todo
+{% endblock %}
+
+{% block todos %}
+<div class="contain-todo">
+  <form method="post">
+    <input class="input-todo" type="text" placeholder="Enter todo...">
+    <button class="btn-submit" type="submit">Add</button>
+  </form>
+  <form method="post" action="{% url 'index:update' %}">
+    {% csrf_token %}
+    <div class="todo-item">
+      <input type="checkbox" onchange="this.form.submit()" />
+      <div>text for this todos</div>
+      <a href="{% url 'index:delete' %}">del</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

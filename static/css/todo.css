@@ -1,0 +1,16 @@
+.contain-todo{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input-todo{
+  width: 280px;
+}
+
+
+
+
+.todo-item{
+  display: flex;
+  justify-content: center;
+}

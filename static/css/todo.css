@@ -1,16 +1,75 @@
-.contain-todo{
+.container{
   margin: 0 auto;
   text-align: center;
 }
-
+.contain-todo{
+  position: relative;
+  width: 420px;
+  height: auto;
+  margin: 150px auto 0;
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px 5px;
+}
 .input-todo{
-  width: 280px;
+  width: 300px;
+  padding: 4px 7px;
+  outline: none;
+}
+
+.complite{
+  margin-right: 10px;
+  margin-left: -10px;
+  align-items: center;
+}
+.btn-del{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  width: 22px;
+  margin-left: 5px;
+  margin-right: -13px;
 }
 
 
+.add-todo{
+  margin-bottom: 30px;
+}
 
-
+.text-todo{
+  text-align: left;
+  background-color: rgb(239, 239, 239);
+  border-radius: 10px 3px;
+  padding: 5px 7px;
+  font-family:'Courier New', Courier, monospace;
+  transition: all 0.4s;
+}
+.text-todo:hover{
+  background-color: rgb(230, 230, 230);
+}
+.hr{
+  width: 95%;
+  margin: 0 auto;
+  height: 3px;
+  border-bottom: 1px solid #000;
+}
+.app-name{
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+}
 .todo-item{
   display: flex;
-  justify-content: center;
+  margin: 20px auto 20px;
+  width: 370px;
+  justify-content: space-between;
+}
+
+body, html{
+  height: 100%;
+  overflow-y: auto;
+}
+
+body{
+  background:  linear-gradient(45deg, rgb(0, 18, 246) 15%, rgb(202, 81, 231) 83%) fixed;
 }

@@ -8,22 +8,25 @@ from django.contrib import auth
 
 
 def MyLogin(request):
-    if request.method == 'POST':
-        form = UserForm(data=request.POST)
-        if form.is_valid():
-            username = request.POST["username"]
-            password = request.POST["password"]
-            user = auth.authenticate(username=username, password=password)
-            if user:
-                auth.login(request, user)
-                return HttpResponseRedirect('/')
+    if not request.user.is_authenticated:
+        if request.method == 'POST':
+            form = UserForm(data=request.POST)
+            if form.is_valid():
+                username = request.POST["username"]
+                password = request.POST["password"]
+                user = auth.authenticate(username=username, password=password)
+                if user:
+                    auth.login(request, user)
+                    return HttpResponseRedirect('/')
+        else:
+            form = UserForm()
+        context = {
+            'form': form,
+            'title': 'login'
+        }
+        return render(request, 'auth/login.html', context)
     else:
-        form = UserForm()
-    context = {
-        'form': form,
-        'title': 'login'
-    }
-    return render(request, 'auth/login.html', context)
+        return HttpResponseRedirect("/")
 
 
 def MyRegister(request):
@@ -39,3 +42,8 @@ def MyRegister(request):
         'title': 'register'
     }
     return render(request, 'auth/register.html', context)
+
+
+def MyLogout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/users/login')

@@ -36,6 +36,29 @@
   margin-bottom: 30px;
 }
 
+.contain-complite{
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.complite{
+  display: block;
+  margin: 0 auto;
+  height: 12px;
+  width: 12px;
+  border: 1px solid green;
+  border-radius: 2px;
+  position: relative;
+}
+
+.a{
+  position: absolute;
+  left: -3px;
+  top: -4px;
+}
+
 .text-todo{
   text-align: left;
   background-color: rgb(239, 239, 239);
@@ -43,9 +66,30 @@
   padding: 5px 7px;
   font-family:'Courier New', Courier, monospace;
   transition: all 0.4s;
+  width: 315px;
+  word-break: break-all;
+}
+.text-todo-complite{
+  text-align: left;
+  background-color: rgb(194, 255, 177);
+  border-radius: 10px 3px;
+  padding: 5px 7px;
+  font-family:'Courier New', Courier, monospace;
+  transition: all 0.4s;
+  width: 315px;
+  word-break: break-all;
 }
 .text-todo:hover{
   background-color: rgb(230, 230, 230);
+}
+.btn-submit{
+  height: 27px;
+  width: 50px;
+  border: none;
+  color: white;
+  background-color: rgb(132, 0, 255);
+  font-weight: bold;
+  cursor: pointer;
 }
 .hr{
   width: 95%;
@@ -67,7 +111,6 @@
 
 body, html{
   height: 100%;
-  overflow-y: auto;
 }
 
 body{

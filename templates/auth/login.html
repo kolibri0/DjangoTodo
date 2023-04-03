@@ -1,13 +1,21 @@
 {% extends 'auth/base_auth.html' %}
 
+{% load static %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
 {% block title %}
 login
 {% endblock %}
 
 {% block login %}
-<form method="post" action="{% url 'users:login' %}">
+<form class="form" method="post" action="{% url 'users:login' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Login</button>
+  <button class="submit-btn" type="submit">Login</button>
+  <div class="redirect">You don't have <a class="account" href="/users/register">account?</a></div>
 </form>
 {% endblock %}

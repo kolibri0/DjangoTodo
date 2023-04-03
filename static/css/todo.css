@@ -109,6 +109,23 @@
   justify-content: space-between;
 }
 
+.auth{
+  width: 100%;
+  text-align: right;
+}
+.auth-item{
+  background-color: black;
+  border-radius: 2px;
+  padding: 4px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.auth-item:hover{
+  background-color: rgb(202, 81, 231);
+}
+
 body, html{
   height: 100%;
 }

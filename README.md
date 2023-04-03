@@ -1,6 +1,20 @@
 ## DjangoTodo
 # This project was created for learn Django
 
+## Project structure
+* DjangoTodo - setting project
+* static - statics files (css, js, img)
+* templates - folder for html files
+* todo - this is where the todo application logic is stored
+  * urls - file with url
+  * models - here is a description the todo model 
+  * views - logic todo
+* users - user authentication folder
+  * forms - file form for template
+  * urls - file with url
+  * views - logic for auth
+  
+
 ### > order page
 > 
 ![FireShot Capture 034 - Todo - localhost](https://user-images.githubusercontent.com/99971966/229567286-f9f866e7-3566-4753-b6a2-9331001178b1.png)
